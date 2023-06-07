@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Traversing and accessing the array</title>
+</head>
+
+<script>
+    //displaying array
+    let array = [12, 32, 123, 64, 23, 15, 32, 76, 45]
+    document.write(`array - [${array}]`)
+
+    //logical function after button click
+    function findTheIndex() {
+        //retreiving value
+        let index = document.getElementById("index").value
+
+        //validation
+        if (index >= array.length || index < 0) {
+            alert("Please enter valid index")
+        }
+
+        //logic
+        for (let i = 0; i < array.length; i++) {
+            if (i == index) {
+                document.getElementById("result").innerText = `at index -> ${i} , ${array[i]} is present`
+            }
+        }
+    }
+</script>
+
+<body>
+    <!-- basic html -->
+    <br>
+    <br>
+    <input style="background-color: #66bfbf;" type="number" id="index" placeholder="type index" />
+    <button style="background-color: #66bfbf;" onclick="findTheIndex()">Submit</button>
+    <p id="result"></p>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Delete an element from array</title>
+</head>
+
+<body>
+    <script>
+        //displaying array
+        let array = [12, 31, 542, 62, 63, 10, 36, 240]
+        document.write(`[${array}]`)
+
+        // logical function after button click
+        function deleteEl() {
+            //retreiving values
+            let index = Number(document.getElementById("index").value)
+            console.log(index)
+
+            //validation
+            if (index < 0 || index > array.length - 1) {
+                alert("Please enter valid index")
+                return null
+            }
+
+            //logic
+            for (let i = index; i < array.length; i++) {
+                // we will shift the places of next index value to previous index starting from user input index.
+                array[i] = array[i + 1]
+            }
+
+
+            // at the end , we will remove last element from array
+            // we dont "array.pop()" use as it is a built-in js function \
+            array.length = array.length - 1
+
+            //displaying result
+            document.getElementById("newArr").innerText = `new array is -> [${array}]`
+        }
+    </script>
+
+    <!-- basic html -->
+    <br>
+    <br>
+    <input placeholder="enter index to remove" id="index" style="background-color: black;" />
+    <button onclick="deleteEl()" style="background-color: black;">Submit</button>
+
+    <p id="newArr"></p>
+</body>
+
+</html>

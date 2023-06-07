@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search element inside an array</title>
+</head>
+
+<body>
+
+    <!-- the problem is -> we have to find the index of element inside an array, if it exists , it is a simple one so not writting html stuff!-->
+    <script>
+        let array = [12, 31, 42, 3122, 53, 42, 1233, 74, 30]
+        let searchElement = 12
+
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == searchElement) {
+                document.write(`index is => ${i}`)
+            }
+        }
+    </script>
+</body>
+
+</html>
