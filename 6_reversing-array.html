@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reversing an array</title>
+</head>
+
+<body>
+    <!-- basically , we just have to exhange 1st and last element of the array and then move the pointer to next and second last element and so  -->
+    <script>
+        let array = [1,2,3,4,5,6,7,8,9]
+        let lastIndex = array.length -1 
+
+        for(let i = 0 ; i < lastIndex/2 ; i++){
+            
+            let temp = array[i] // here we stored first element in temp that is 1
+            array[i] = array[lastIndex] // we are replacing first element with last element that is 9
+            array[lastIndex] = temp // temp is first element that is 1 and we are replacing last element value with that of first one .
+            lastIndex--
+        }
+
+        console.log(array)
+    </script>
+
+</body>
+
+</html>

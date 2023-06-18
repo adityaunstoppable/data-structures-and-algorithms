@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Merge two arrays using while loop</title>
+</head>
+<body>
+
+    <script>
+
+        let firstArray = [21,31,4,2,53,23,15]
+        let secondArray= [22 , 18, 10, 222, 523, 12]
+        let resultArray = []
+        let i= 0
+        let j = 0
+        let k = 0 
+        while(i<=secondArray.length -1){
+            if(firstArray[i] < secondArray[j]){
+                resultArray[k] = firstArray[i]
+                i++
+            }else{
+                resultArray[k] = secondArray[j]
+                j++
+            }
+            k++
+        }
+
+        while(j < secondArray.length){
+            resultArray[k] = secondArray[j]
+            j++
+            k++
+        }
+        console.log(resultArray)
+    </script>
+    
+</body>
+</html>

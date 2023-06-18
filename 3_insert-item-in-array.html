@@ -7,7 +7,6 @@
 
 <body>
     <script>
-
         // we can use splice built-in function of JS to perform same 
         //splice(index , no. of elements to delete , new value)
 
@@ -16,14 +15,11 @@
         //displaying array
         document.write(`[${array}]`)
 
-
         //login function after button submit 
         function insertElement() {
             // retrieving values
             let index = document.getElementById("index").value;
             let newValue = document.getElementById("newValue").value;
-
-
 
             //checking if index is less than 0 or greater than length of array
             if (index < 0 || index > array.length - 1) {
